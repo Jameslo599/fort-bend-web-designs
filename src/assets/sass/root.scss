@@ -8,17 +8,16 @@
 <---        Core Styles         -->
 <--- -------------------------- -*/
 
-/* CodeStitch Core Styles + Reset */
 @media only screen and (min-width: 0rem) {
   /* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
   :root {
-    --primary: #935d06;
-    --primaryLight: #edc979;
-    --secondary: #d69c38bd;
-    --secondaryLight: #ffba43;
+    --primary: #001f3f;
+    --primaryLight: #43b7ff;
+    --secondary: #43b7ff;
+    --secondaryLight: #001f3f;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
-    --bodyTextColorWhite: #f2f2f2;
+    --bodyTextColorWhite: #fafcff;
 
     /* Dark Mode Styles */
     --dark: #333333;
