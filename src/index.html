@@ -1,0 +1,1015 @@
+---
+title: 'Roofer Near You | L&L Contracting | Dallas, Texas'
+description: 'Trusted Dallas roofers for repair, replacement, maintenance, gutters, skylights & solar. Insurance help & 24/7 emergency service!'
+permalink: '/'
+tags: 'sitemap' # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<!-- Critical styles are loaded first -->
+<link rel="stylesheet" href="/assets/css/critical.css" />
+
+<!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
+{% if kit.isProduction %}
+<link
+  rel="preload"
+  href="/assets/css/local.css"
+  as="style"
+  onload="this.onload=null;this.rel='stylesheet'"
+/>
+<noscript>
+  <link rel="stylesheet" href="/assets/css/local.css" />
+</noscript>
+
+{% else %}
+<link rel="stylesheet" href="/assets/css/local.css" />
+{% endif %}
+
+<!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customizing  -->
+<!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
+{% include "components/home-schema.html" %} {% endblock %} {% block body %}
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1785">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h1 class="cs-title">{{client.nameCaps}}</h1>
+      <p class="cs-text">Dallas's Top Choice for Residential Roofing.</p>
+      <div class="cs-button-group">
+        <a href="/contact/" class="cs-button-solid cs-button1">CONTACT US</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Image -->
+  <picture class="cs-background">
+    <!-- Mobile -->
+    <source
+      media="(max-width: 600px)"
+      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 640, height: 1490 }) | avif %}"
+      type="image/avif"
+    />
+    <source
+      media="(max-width: 600px)"
+      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 640, height: 1490 }) | webp %}"
+      type="image/webp"
+    />
+    <source
+      media="(max-width: 600px)"
+      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 640, height: 1490 }) | jpeg %}"
+      type="image/jpeg"
+    />
+
+    <!-- Tablet -->
+    <source
+      media="(max-width: 1024px)"
+      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 1024, height: 1400 }) | avif %}"
+      type="image/avif"
+    />
+    <source
+      media="(max-width: 1024px)"
+      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 1024, height: 1400 }) | webp %}"
+      type="image/webp"
+    />
+    <source
+      media="(max-width: 1024px)"
+      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 1024, height: 1400 }) | jpeg %}"
+      type="image/jpeg"
+    />
+
+    <!-- Desktop -->
+    <source
+      media="(min-width: 1025px)"
+      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 1920, height: 1080 }) | avif %}"
+      type="image/avif"
+    />
+    <source
+      media="(min-width: 1025px)"
+      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 1920, height: 1080 }) | webp %}"
+      type="image/webp"
+    />
+    <source
+      media="(min-width: 1025px)"
+      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 1920, height: 1080 }) | jpeg %}"
+      type="image/jpeg"
+    />
+
+    <!-- Fallback -->
+    <img
+      src="{% getUrl '/assets/images/background.webp' | resize({ width: 1920, height: 1080 }) | webp %}"
+      alt="Professional roofers working on a residential roof"
+      width="1920"
+      height="1080"
+      loading="eager"
+      decoding="async"
+    />
+  </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+
+<section id="services-279">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Services</span>
+      <h2 class="cs-title">ROOFING SERVICES NEAR DALLAS, TEXAS</h2>
+      <p class="cs-text">
+        L&L Contracting provides dependable, high-quality roofing services
+        designed to protect your property and enhance its curb appeal. Whether
+        you need roof repair, replacement, installation, or maintenance, our
+        licensed experts deliver long-lasting results built to withstand Texas
+        weather. We also offer emergency roofing, gutter services, skylight
+        installation, and roof coatings to keep your home or business in top
+        condition. With a focus on excellence, transparency, and same-day
+        service, L&L Contracting is Dallas’s trusted choice for all your
+        residential and commercial roofing needs.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room-m.jpg
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Roof Inspections</h3>
+          <a
+            class="cs-button-transparent"
+            aria-label="Get a Quote about Roof Inspections"
+            href="/contact"
+            >Get a Quote</a
+          >
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom-m.jpg
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom.jpg
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Roof Repair</h3>
+          <a
+            class="cs-button-transparent"
+            aria-label="Get a Quote about Roof Repair"
+            href="/contact"
+            >Get a Quote</a
+          >
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room-m.jpg
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Roof Installation / Replacement</h3>
+          <a
+            class="cs-button-transparent"
+            aria-label="Get a Quote about Roof Installation / Replacement"
+            href="/contact"
+            >Get a Quote</a
+          >
+        </div>
+      </li>
+    </ul>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room-m.jpg
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Re-Roofing</h3>
+          <a
+            class="cs-button-transparent"
+            aria-label="Get a Quote about Re-Roofing"
+            href="/contact"
+            >Get a Quote</a
+          >
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom-m.jpg
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom.jpg
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Roof Maintenance</h3>
+          <a
+            class="cs-button-transparent"
+            aria-label="Get a Quote about Roof Maintenance"
+            href="/contact"
+            >Get a Quote</a
+          >
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room-m.jpg
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Emergency Services</h3>
+          <a
+            class="cs-button-transparent"
+            aria-label="Get a Quote about Emergency Services"
+            href="/contact"
+            >Get a Quote</a
+          >
+        </div>
+      </li>
+    </ul>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room-m.jpg
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Gutter Services</h3>
+          <a
+            class="cs-button-transparent"
+            aria-label="Get a Quote about Gutter Services"
+            href="/contact"
+            >Get a Quote</a
+          >
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom-m.jpg
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom.jpg
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Skylight Installation / Repair</h3>
+          <a
+            class="cs-button-transparent"
+            aria-label="Get a Quote about Skylight Installation / Repair"
+            href="/contact"
+            >Get a Quote</a
+          >
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room-m.jpg
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Roof Coatings and Waterproofing</h3>
+          <a
+            class="cs-button-transparent"
+            aria-label="Get a Quote about Roof Coatings and Waterproofing"
+            href="/contact"
+            >Get a Quote</a
+          >
+        </div>
+      </li>
+    </ul>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room-m.jpg
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Material Expertise</h3>
+          <a
+            class="cs-button-transparent"
+            aria-label="Get a Quote about Material Expertise"
+            href="/contact"
+            >Get a Quote</a
+          >
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom-m.jpg
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom.jpg
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Insurance Claim Assistance</h3>
+          <a
+            class="cs-button-transparent"
+            aria-label="Get a Quote about Insurance Claim Assistance"
+            href="/contact"
+            >Get a Quote</a
+          >
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room-m.jpg
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Solar Removal / Reinstall</h3>
+          <a
+            class="cs-button-transparent"
+            aria-label="Get a Quote about Solar Removal / Reinstall"
+            href="/contact"
+            >Get a Quote</a
+          >
+        </div>
+      </li>
+    </ul>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room-m.jpg
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Solar Maintenance</h3>
+          <a
+            class="cs-button-transparent"
+            aria-label="Get a Quote about Solar Maintenance"
+            href="/contact"
+            >Get a Quote</a
+          >
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom-m.jpg
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom.jpg
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom.jpg"
+            alt="living room"
+            width="348"
+            height="433"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-box">
+          <h3 class="cs-h3">Solar Cleaning</h3>
+          <a
+            class="cs-button-transparent"
+            aria-label="Get a Quote about Solar Cleaning"
+            href="/contact"
+            >Get a Quote</a
+          >
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Side By Side                -->
+<!-- ============================================ -->
+
+<section id="sbs-2295">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <!--Main Image-->
+      <div class="cs-picture-wrapper1">
+        <picture class="cs-picture cs-picture1">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimages2.nyc3.digitaloceanspaces.com/Images/Landscapes/construction-before1.jpg
+            "
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimages2.nyc3.digitaloceanspaces.com/Images/Landscapes/construction-before1.jpg
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimages2.nyc3.digitaloceanspaces.com/Images/Landscapes/construction-before1.jpg"
+            alt="construction"
+            width="272"
+            height="337"
+          />
+        </picture>
+        <span class="cs-tag">Before</span>
+      </div>
+      <!--Small Image-->
+      <div class="cs-picture-wrapper2">
+        <picture class="cs-picture cs-picture2">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimages2.nyc3.digitaloceanspaces.com/Images/Landscapes/construction-after1.jpg
+            "
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimages2.nyc3.digitaloceanspaces.com/Images/Landscapes/construction-after1.jpg
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimages2.nyc3.digitaloceanspaces.com/Images/Landscapes/construction-after1.jpg"
+            alt="construction"
+            width="243"
+            height="367"
+          />
+        </picture>
+        <span class="cs-tag">After</span>
+      </div>
+      <img
+        class="cs-arrow"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/before-after-arrow.svg"
+        alt="arrow"
+        width="148"
+        height="54"
+      />
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">ABOUT US</span>
+      <h2 class="cs-title">Our Story</h2>
+      <p class="cs-text">
+        At L&L Contracting, we believe your home deserves more than just a roof
+        — it deserves protection, beauty, and peace of mind. Founded with a
+        commitment to quality, integrity, and exceptional service, we have built
+        a reputation in Fort Worth, Texas as a trusted roofing partner for
+        homeowners and businesses alike.<br /><br />
+
+        Our team of licensed and experienced roofers brings unmatched expertise
+        to every project, whether it’s a minor repair, a full roof replacement,
+        or a complex installation. We take the time to understand your needs,
+        guide you through every step, and ensure your roof is built to last —
+        combining durable materials, skilled craftsmanship, and attention to
+        detail.<br /><br />
+
+        Beyond roofing, we offer gutters, skylights, roof coatings, and
+        emergency services, giving our clients comprehensive solutions under one
+        roof. At L&L Contracting, we’re not just repairing or replacing roofs —
+        we’re protecting homes, supporting families, and building lasting
+        relationships.<br /><br />
+
+        When you choose L&L Contracting, you’re choosing a company that values
+        honesty, excellence, and reliability, every nail, every shingle, every
+        time.
+      </p>
+      <a href="/contact" class="cs-button-solid">Book An Inspection</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                 Why Choose                   -->
+<!-- ============================================ -->
+
+<section id="why-choose-289">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">Our Process</span>
+        <h2 class="cs-title">WHY CHOOSE {{client.nameCaps}}</h2>
+      </div>
+      <p class="cs-text">
+        As a trusted Dallas roofer, L&L Contracting is dedicated to safety,
+        efficiency, and customer satisfaction. Trust our experienced
+        professionals to provide dependable roofs that last decades.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item holographic-card">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/award.svg"
+          alt="icon"
+          width="48"
+          height="48"
+        />
+        <h3 class="cs-h3">100% SATISFACTION GUARANTEE</h3>
+        <p class="cs-item-text">
+          We ensure all customers are completely happy with their result in
+          every electrical project.
+        </p>
+      </li>
+      <li class="cs-item holographic-card">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/sheild-black.svg"
+          alt="icon"
+          width="40"
+          height="48"
+        />
+        <h3 class="cs-h3">20+ YEARS EXPERIENCE</h3>
+        <p class="cs-item-text">
+          With over 25 years of experience, our expertise in electrical work is
+          unmatched.
+        </p>
+      </li>
+      <li class="cs-item holographic-card">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/call.svg"
+          alt="icon"
+          width="48"
+          height="48"
+        />
+        <h3 class="cs-h3">24/7 SUPPORT</h3>
+        <p class="cs-item-text">
+          Our commitment to clear and timely communication ensures a smooth,
+          stress-free experience for every client.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Gallery                     -->
+<!-- ============================================ -->
+
+<section id="gallery-483">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">OUR WORK</span>
+      <h2 class="cs-title">See How We've Helped Others</h2>
+      <p class="cs-text">Serving all of the Dallas/Fort Worth Area.</p>
+      <a href="/gallery" class="cs-cta">
+        <!--Arrow Right-->
+        <svg
+          class="cs-arrow"
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+        >
+          <path
+            fill="#FAFBFC"
+            d="M24.55 31.367c-.317 0-.633-.117-.883-.367a1.258 1.258 0 0 1 0-1.767L32.9 20l-9.233-9.233a1.258 1.258 0 0 1 0-1.767 1.258 1.258 0 0 1 1.766 0L35.55 19.117a1.258 1.258 0 0 1 0 1.766L25.433 31c-.25.25-.566.367-.883.367Z"
+          />
+          <path
+            fill="#FAFBFC"
+            d="M34.383 21.25H6.333A1.26 1.26 0 0 1 5.083 20c0-.683.567-1.25 1.25-1.25h28.05c.684 0 1.25.567 1.25 1.25a1.26 1.26 0 0 1-1.25 1.25Z"
+          />
+        </svg>
+        <!--Wrapped in a span so it can be animated-->
+        <span class="cs-cta-text"
+          >Discover<br />
+          More</span
+        >
+      </a>
+      <picture class="cs-content-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="{% getUrl '/assets/images/photo1.webp' | webp %}"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="{% getUrl '/assets/images/photo1.webp' | webp %}"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="/assets/images/photo1.webp"
+          alt="yard"
+          width="630"
+          height="532"
+        />
+      </picture>
+    </div>
+    <div class="cs-grid">
+      <picture class="cs-picture cs-picture1">
+        <source
+          media="(max-width: 600px)"
+          srcset="{% getUrl '/assets/images/photo1.webp' | webp %}"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="{% getUrl '/assets/images/photo1.webp' | webp %}"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="/assets/images/photo1.webp"
+          alt="yard"
+          width="305"
+          height="350"
+        />
+      </picture>
+      <picture class="cs-picture cs-picture2">
+        <source
+          media="(max-width: 600px)"
+          srcset="{% getUrl '/assets/images/photo1.webp' | webp %}"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="{% getUrl '/assets/images/photo1.webp' | webp %}"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="/assets/images/photo1.webp"
+          alt="yard"
+          width="305"
+          height="348"
+        />
+      </picture>
+      <picture class="cs-picture cs-picture3">
+        <source
+          media="(max-width: 600px)"
+          srcset="{% getUrl '/assets/images/photo1.webp' | webp %}"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="{% getUrl '/assets/images/photo1.webp' | webp %}"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="/assets/images/photo1.webp"
+          alt="yard"
+          width="305"
+          height="387"
+        />
+      </picture>
+      <picture class="cs-picture cs-picture4">
+        <source
+          media="(max-width: 600px)"
+          srcset="{% getUrl '/assets/images/photo1.webp' | webp %}"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="{% getUrl '/assets/images/photo1.webp' | webp %}"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="/assets/images/photo1.webp"
+          alt="yard"
+          width="305"
+          height="483"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-67">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Reviews</span>
+      <h2 class="cs-title">READ WHAT OUR CUSTOMERS SAY</h2>
+      <p class="cs-text">
+        From the first phone call to the final inspection, we treat every
+        project with the same level of care and attention as if we were working
+        on our own property. Our team is committed to listening to your needs,
+        offering clear solutions, and ensuring your complete
+        satisfaction—because for us, it’s not just about fixing wires, it’s
+        about building lasting relationships with the people we serve.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <!-- Review 1 -->
+      <li class="cs-item">
+        <img
+          class="cs-item-img"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="/assets/svgs/quote.svg"
+          alt="profile picture"
+          width="80"
+          height="80"
+        />
+        <p class="cs-item-text">
+          L&L Contracting exceeded all my expectations! From the initial
+          consultation to the final cleanup, their team was professional,
+          punctual, and extremely knowledgeable. They repaired my roof quickly
+          and even helped me navigate my insurance claim. I couldn’t be happier
+          with the quality of work and the attention to detail. Highly recommend
+          them for anyone looking for reliable roofing services!
+        </p>
+        <div class="cs-info">
+          <div class="cs-flex-group">
+            <span class="cs-name">Randy Seamans</span>
+            <span class="cs-desc">Homeowner</span>
+          </div>
+          <img
+            class="cs-item-stars"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="/assets/svgs/stars.svg"
+            alt="stars"
+            width="96"
+            height="16"
+          />
+        </div>
+      </li>
+      <!-- Review 2 -->
+      <li class="cs-item">
+        <img
+          class="cs-item-img"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="/assets/svgs/quote.svg"
+          alt="profile picture"
+          width="80"
+          height="80"
+        />
+        <p class="cs-item-text">
+          I had a full roof replacement done by L&L Contracting, and the
+          experience was fantastic. The crew was friendly, efficient, and
+          answered all my questions along the way. They used high-quality
+          materials, and my new roof looks amazing. I also appreciated their
+          transparency and fair pricing. Definitely a company I trust for future
+          roofing projects.
+        </p>
+        <div class="cs-info">
+          <div class="cs-flex-group">
+            <span class="cs-name">Wesley Collins</span>
+            <span class="cs-desc">Homeowner</span>
+          </div>
+          <img
+            class="cs-item-stars"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="/assets/svgs/stars.svg"
+            alt="stars"
+            width="96"
+            height="16"
+          />
+        </div>
+      </li>
+    </ul>
+    <a href="/reviews/" class="cs-button-solid">Read All Reviews</a>
+  </div>
+</section>
+
+{% endblock %}
