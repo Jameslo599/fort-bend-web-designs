@@ -33,7 +33,7 @@
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 
     --headerFont: 'Roboto', Arial, sans-serif;
-    --bodyFont: 'Roboto', Arial, sans-serif;
+    --bodyFont: Georgia, Arial, sans-serif;
   }
 
   html,
@@ -130,7 +130,7 @@
     font-size: calc(16 / 16 * 1rem);
     line-height: calc(16 / 16 * 1em);
     font-weight: bold;
-    border-radius: calc(4 / 16 * 1rem);
+    border-radius: 0.5rem;
     overflow: hidden;
 
     // Transition Properties
@@ -155,7 +155,7 @@
       content: '';
       opacity: 1;
       display: block;
-      background-color: #333333;
+      background-color: var(--primaryLight);
       height: 100%;
 
       //Transition properties
@@ -235,6 +235,32 @@
     .cs-dark,
     .dark {
       display: block !important;
+    }
+
+    .cs-button-solid:not(.cs-button-transparent) {
+      background: linear-gradient(45deg, #cecece 0%, #ffffff 100%);
+      color: var(--primary);
+      transition: box-shadow 0.3s ease-in-out;
+      box-shadow: rgba(67, 183, 255, 0.2) 0px 0px 24px,
+        rgba(67, 183, 255, 0.2) 0px 0px 39px,
+        rgba(67, 183, 255, 0.2) 0px 0px 60px;
+
+      &:before {
+        opacity: 0;
+        background-color: #fff;
+        width: 100%;
+        transition: opacity 0.4s;
+      }
+      &:hover {
+        animation: none;
+        box-shadow: rgba(67, 183, 255, 0.2) 0px 0px 24px,
+          rgba(67, 183, 255, 0.2) 0px 0px 39px,
+          rgba(67, 183, 255, 0.2) 0px 0px 54px,
+          rgba(67, 183, 255, 0.2) 0px 0px 74px;
+        &:before {
+          opacity: 1;
+        }
+      }
     }
 
     .cs-button-outline {
