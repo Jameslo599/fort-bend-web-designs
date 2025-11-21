@@ -1339,7 +1339,6 @@ $border-color_5: #0a2030;
         transform-style: preserve-3d;
         perspective: 700px;
         display: flex;
-        flex-direction: column;
         flex-flow: row wrap;
         justify-content: center;
         margin: 0;
@@ -1493,6 +1492,7 @@ $border-color_5: #0a2030;
     #pricing-1690 {
       .cs-card-group {
         flex-wrap: nowrap;
+        flex-direction: row;
       }
     }
   }
