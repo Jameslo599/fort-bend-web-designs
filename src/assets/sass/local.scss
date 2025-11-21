@@ -1603,6 +1603,12 @@ $border-color_5: #0a2030;
         line-height: 1.5em;
         color: var(--bodyTextColor);
       }
+      .cs-star-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
 
       .cs-name {
         /* 20px - 25px */
