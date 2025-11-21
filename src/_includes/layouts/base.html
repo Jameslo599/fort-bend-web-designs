@@ -1,5 +1,3 @@
-<!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -55,6 +53,20 @@
       href="/assets/fonts/roboto-v29-latin-700.woff2"
       crossorigin
     />
+    <link
+      rel="preload"
+      as="font"
+      type="font/ttf"
+      href="/assets/fonts/Merriweather-VariableFont_opsz,wdth,wght.ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/ttf"
+      href="/assets/fonts/Merriweather-Italic-VariableFont_opsz,wdth,wght.ttf"
+      crossorigin
+    />
 
     <!-- Sitewide Stylesheets and Scripts -->
     <link rel="stylesheet" href="/assets/css/root.css" />
@@ -87,6 +99,6 @@
 
     {% include "sections/header.html" %}
     <main id="main">{% block body %}{% endblock %}</main>
-    {% include "sections/footer.html" %}
+    {% include "sections/cta.html" %} {% include "sections/footer.html" %}
   </body>
 </html>
