@@ -34,80 +34,56 @@ tags: 'sitemap' # content/content.json will make sure that all pages in content/
 <!--                    Hero                      -->
 <!-- ============================================ -->
 
-<section id="hero-1785">
+<section id="hero-855">
   <div class="cs-container">
     <div class="cs-content">
-      <h1 class="cs-title">{{client.nameCaps}}</h1>
-      <p class="cs-text">Dallas's Top Choice for Residential Roofing.</p>
-      <div class="cs-button-group">
-        <a href="/contact/" class="cs-button-solid cs-button1">CONTACT US</a>
-      </div>
+      <span class="cs-topper">CUSTOM-BUILT WEBSITES</span>
+      <h1 class="cs-title">SMALL BUSINESS WEB DESIGNER</h1>
+      <p class="cs-text">
+        Create a website that works as hard as you do. Every site we deliver is
+        100% hand-coded for speed, stability, and long-term performance. Our
+        custom websites start at just $149/mo, with Google Ads and SEO services
+        to help you grow even faster.
+      </p>
+      <a href="" class="cs-button-solid">GET STARTED</a>
     </div>
+    <!--Hero Image-->
+    <picture class="cs-picture">
+      <!--Mobile-->
+      <source media="(max-width: 600px)" srcset="/assets/images/collage.webp" />
+      <!--Tablet-->
+      <source media="(min-width: 601px)" srcset="/assets/images/collage.webp" />
+      <!--Desktop-->
+      <source
+        media="(min-width: 1024px)"
+        srcset="/assets/images/collage.webp"
+      />
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/images/collage.webp"
+        alt="therapy"
+        width="570"
+        height="701"
+      />
+    </picture>
   </div>
-
-  <!-- Background Image -->
-  <picture class="cs-background">
-    <!-- Mobile -->
-    <source
-      media="(max-width: 600px)"
-      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 640, height: 1490 }) | avif %}"
-      type="image/avif"
+  <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+  <svg
+    class="cs-wave"
+    width="1920"
+    height="179"
+    viewBox="0 0 1920 179"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z"
+      fill="white"
     />
-    <source
-      media="(max-width: 600px)"
-      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 640, height: 1490 }) | webp %}"
-      type="image/webp"
-    />
-    <source
-      media="(max-width: 600px)"
-      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 640, height: 1490 }) | jpeg %}"
-      type="image/jpeg"
-    />
-
-    <!-- Tablet -->
-    <source
-      media="(max-width: 1024px)"
-      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 1024, height: 1400 }) | avif %}"
-      type="image/avif"
-    />
-    <source
-      media="(max-width: 1024px)"
-      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 1024, height: 1400 }) | webp %}"
-      type="image/webp"
-    />
-    <source
-      media="(max-width: 1024px)"
-      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 1024, height: 1400 }) | jpeg %}"
-      type="image/jpeg"
-    />
-
-    <!-- Desktop -->
-    <source
-      media="(min-width: 1025px)"
-      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 1920, height: 1080 }) | avif %}"
-      type="image/avif"
-    />
-    <source
-      media="(min-width: 1025px)"
-      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 1920, height: 1080 }) | webp %}"
-      type="image/webp"
-    />
-    <source
-      media="(min-width: 1025px)"
-      srcset="{% getUrl '/assets/images/background.webp' | resize({ width: 1920, height: 1080 }) | jpeg %}"
-      type="image/jpeg"
-    />
-
-    <!-- Fallback -->
-    <img
-      src="{% getUrl '/assets/images/background.webp' | resize({ width: 1920, height: 1080 }) | webp %}"
-      alt="Professional roofers working on a residential roof"
-      width="1920"
-      height="1080"
-      loading="eager"
-      decoding="async"
-    />
-  </picture>
+  </svg>
 </section>
 
 <!-- ============================================ -->

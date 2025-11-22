@@ -45,6 +45,7 @@
     font-size: 100%;
     transition: background-color 0.3s;
     color: var(--bodyTextColor);
+    scroll-behavior: smooth;
   }
 
   *,
@@ -124,13 +125,13 @@
     display: inline-block;
     background-color: var(--primary);
     width: auto;
-    padding: calc(16 / 16 * 1rem) calc(32 / 16 * 1rem);
+    padding: calc(18 / 16 * 1rem) calc(32 / 16 * 1rem);
     text-decoration: none;
     text-transform: uppercase;
     font-size: calc(16 / 16 * 1rem);
     line-height: calc(16 / 16 * 1em);
     font-weight: bold;
-    border-radius: 0.5rem;
+    border-radius: 2rem;
     overflow: hidden;
 
     // Transition Properties
@@ -2325,9 +2326,11 @@ $border-color_1: #01060a;
 @media only screen and (min-width: 0rem) {
   #footer-1527 {
     padding: var(--sectionPadding);
+    padding-top: 6rem;
+    padding-bottom: 2rem;
     box-sizing: border-box;
     overflow: hidden;
-    background-color: #1a1a1a;
+    background-color: var(--primary);
     position: relative;
     z-index: 1;
 
@@ -2378,6 +2381,10 @@ $border-color_1: #01060a;
       opacity: 0.8;
     }
 
+    .cs-text {
+      color: var(--bodyTextColorWhite);
+    }
+
     .cs-social {
       display: flex;
       justify-content: center;
@@ -2394,9 +2401,10 @@ $border-color_1: #01060a;
       justify-content: center;
       align-items: center;
       background-color: #484848;
+      transition: background-color 0.1s ease-in-out;
 
       &:hover {
-        background-color: var(--primary);
+        background-color: var(--primaryLight);
       }
 
       svg {
@@ -2407,6 +2415,14 @@ $border-color_1: #01060a;
 
       svg path {
         transition: fill 0.3s;
+      }
+    }
+
+    .cs-button-solid {
+      background-color: var(--primaryLight);
+      color: var(--primary);
+      &:before {
+        background-color: var(--bodyTextColorWhite);
       }
     }
 
@@ -2435,7 +2451,7 @@ $border-color_1: #01060a;
       flex-direction: column;
       align-items: flex-start;
       /* 8px - 12px */
-      gap: clamp(0.5rem, 1.5vw, 0.75rem);
+      gap: 0.75rem;
     }
 
     .cs-contact-link {
@@ -2446,7 +2462,6 @@ $border-color_1: #01060a;
       text-decoration: none;
       margin: 0;
       color: var(--bodyTextColorWhite);
-      opacity: 0.8;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -2454,13 +2469,16 @@ $border-color_1: #01060a;
       transition: color 0.3s;
 
       &:hover {
-        color: var(--primary);
+        color: var(--primaryLight);
       }
     }
 
     .cs-icon {
       filter: grayscale(1) brightness(1000%);
-      opacity: 0.7;
+      opacity: 0.8;
+    }
+    .white {
+      filter: grayscale(1) brightness(1000%);
     }
 
     .cs-gallery {
@@ -2469,7 +2487,7 @@ $border-color_1: #01060a;
       display: grid;
       align-items: center;
       gap: calc(8 / 16 * 1rem);
-      grid-template-columns: repeat(auto-fit, minmax(4.75rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(5.75rem, 1fr));
       grid-template-rows: repeat(auto-fit, minmax(4.75rem, 1fr));
     }
 
@@ -2484,17 +2502,17 @@ $border-color_1: #01060a;
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
         position: absolute;
         top: 0;
         left: 0;
         border-radius: calc(16 / 16 * 1rem);
+        object-fit: contain;
       }
     }
 
     .cs-bottom {
       width: 100%;
-      margin-top: calc(32 / 16 * 1rem);
+      margin: 0;
       padding-top: calc(24 / 16 * 1rem);
       display: flex;
       flex-direction: column;
@@ -2520,7 +2538,6 @@ $border-color_1: #01060a;
         font-size: clamp(0.875rem, 1.5vw, 1rem);
         text-decoration: none;
         color: var(--bodyTextColorWhite);
-        opacity: 0.8;
       }
 
       .cs-link:hover {
@@ -2573,7 +2590,7 @@ $border-color_1: #01060a;
       text-decoration: none;
       line-height: 1.5em;
       text-align: left;
-      color: #bababa;
+      color: var(--bodyTextColorWhite);
       display: inline-flex;
       align-items: flex-start;
       gap: calc(8 / 16 * 1rem);
@@ -2628,6 +2645,7 @@ $border-color_1: #01060a;
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #footer-1527 {
+    padding-top: 8rem;
     .cs-logo-group {
       width: 33.5%;
     }
@@ -2645,7 +2663,7 @@ $border-color_1: #01060a;
     }
 
     .cs-gallery {
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: repeat(10, 1fr);
       grid-template-rows: 1fr;
     }
 
@@ -2660,6 +2678,12 @@ $border-color_1: #01060a;
   }
 }
 
+@media only screen and (min-width: 64rem) {
+  #footer-1527 {
+    padding-top: 13rem;
+  }
+}
+
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode {
@@ -2668,6 +2692,12 @@ $border-color_1: #01060a;
 
       svg path {
         fill: var(--dark);
+      }
+
+      .cs-social-link {
+        &:hover {
+          background-color: var(--bodyTextColorWhite);
+        }
       }
     }
   }
